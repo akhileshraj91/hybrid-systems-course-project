@@ -33,9 +33,9 @@ for i = 1:length(time_stamp)
 
 end
 
-figure, plot(tspan(1:end-1), aux_location)
+figure,plot(tspan, aux_location)
 
-figure, plot(tspan(1:end-1), aux_control)
+figure, plot(tspan, aux_control)
 
 
 
