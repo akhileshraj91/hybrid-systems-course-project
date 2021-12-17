@@ -1,7 +1,7 @@
 clc;
 clear all;
 close all;
-global location;
+global location count control_var;
 A = [0, 0.3, 0.4, 0.3;
     0.3, 0, 0.5, 0;
     0.4, 0.5, 0. 0.3;
@@ -10,7 +10,8 @@ b = [0.3, 0.2, 0.5, 0.4]';
 c = [9, 7, 11, 7]';
 u = 6;
 x0 = [16.5, 16.5, 16.5, 16.5]';
-location = [1 0 1 0];
+location(1,:) = [1 0 1 0];
+count = 1;
 ti = 0;
 tf = 60;
 dt = 1;
