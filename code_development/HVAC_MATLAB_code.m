@@ -47,7 +47,7 @@ subplot(3,1,2);
 % figure(2),
 plot(tspan(1:end-1), aux_location, 'LineWidth',linewidth)
 xlabel('time (s)','FontSize', fontSize); 
-ylabel('Temperature (^\circ)','FontSize', fontSize); 
+ylabel('Heater Location','FontSize', fontSize); 
 legend('loc_1(t)', 'loc_2(t)', 'loc_3(t)','loc_4(t)','FontSize', fontSize);
 title({'Heater locations vs time'},'FontSize', fontSize);
 
@@ -55,7 +55,7 @@ subplot(3,1,3)
 % figure(3),
 plot(tspan(1:end-1), aux_control, 'LineWidth',linewidth)
 xlabel('time (s)','FontSize', fontSize); 
-ylabel('Temperature (^\circ)','FontSize', fontSize); 
+ylabel('Heater State','FontSize', fontSize); 
 legend('h_1(t)', 'h_2(t)', 'h_3(t)','h_4(t)','FontSize', fontSize);
 title({'Heater state vs time'},'FontSize', fontSize);
 
