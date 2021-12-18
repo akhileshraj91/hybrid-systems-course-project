@@ -2,7 +2,7 @@ function h = control(x,loc)
 %     display(loc);
 %     display(x);
     off = [20,20,20,20]';
-    on = [15 19 15 19]';
+    on = [19 19 19 19]';
     
     if x(1) <= on(1) && loc(1) == 1
         h(1) = 1;

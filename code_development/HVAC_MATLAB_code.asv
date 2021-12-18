@@ -17,8 +17,7 @@ tf = 60;
 dt = 1;
 tspan = [ti:dt:tf];
 [t,x_dot] = ode45(@(t,x) HVAC_dynamics(t,x,A,b,c,u),tspan,x0);
-figure()
-plot(t,x_dot)
+
 
 old = 1;
 aux_location(old,:) = location(1,:);
@@ -33,9 +32,17 @@ for i = 1:length(time_stamp)
 
 end
 
-figure,plot(tspan, aux_location)
 
-figure, plot(tspan, aux_control)
+figure(1);
+plot(t,x_dot);
+xlabel('time (s)'); 
+ylabel('Temperature (^\circ)'); 
+legend('x_1(t)', 'x_2(t)', 'x_3(t)','x_4(t)');
+title({'Temperature control between '});
+
+figure, plot(tspan(1:end-1), aux_location)
+
+figure, plot(tspan(1:end-1), aux_control)
 
 
 
